@@ -21,7 +21,7 @@ export function listFilesInFolder(folderPath) {
       console.log("Her")
 
       const pdfData = await extractPdfData(filePath);
-      console.log(pdfData);
+      console.log(pdfData[15]);
     })
   })
 }
@@ -33,12 +33,11 @@ function extractPdfData(filePath) {
 
     reader.parseFileItems(filePath, function (err, item) {
       if (!item) {
-        console.log(pdfData);
+        resolve(pdfData);
         return;
       }
 
       if (item.text) {
-        console.log(item.text)
         pdfData.push(item.text);
       }
     });

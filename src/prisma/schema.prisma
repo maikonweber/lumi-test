@@ -7,18 +7,24 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model fatura {
-  id           Int             @id @default(autoincrement())
-  username     String          @unique
-  email        String          @unique
-  passwordhash passwordhash?
-  usecase      usecase         @default(unkown)
-  createdat    DateTime        @default(now())
-  cookies      cookie[]
-  permission   permission[]
-  userlog      userlog[]
-  wallet       wallet?
-  product      product[]
-  order        order[]
-  profile      users_profile[]
+model cliente {
+  id            Int     @id @default(autoincrement())
+  client        String  @unique
+  name String
+  End String
+  faturas       fatura[] 
 }
+
+model fatura {
+  id               Int       @id @default(autoincrement())
+  client_id        Int
+  mes              DateTime
+  venc             DateTime
+  codigo           String
+  kwh_inject_valor Float
+  kwh_valor        Float
+  Total            Float
+  imp              Float
+  cliente          cliente   @relation(fields: [client_id], references: [id])
+}
+

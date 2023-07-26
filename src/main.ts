@@ -16,8 +16,8 @@ async function bootstrap() {
   app.enableCors();
 
   const config = new DocumentBuilder()
-    .setTitle('Mutter Corp API')
-    .setDescription('This is Mutter Corporation to access all information')
+    .setTitle('API')
+    .setDescription('Test This')
     .setVersion('1.0')
     .addTag('')
     .addBearerAuth()

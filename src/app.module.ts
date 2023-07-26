@@ -19,29 +19,12 @@ import { WebsocketModule } from './websocket/websocket.module';
 
 @Module({
   imports: [
-    ScheduleModule.forRoot(),
     PrismaModule,
-    CustomerModule,
-    AuthModule,
-    LeadsModule,
-    WebsocketModule,
-    
-
-    JwtModule.register({
-      secret: jwtConstants.secret,
-      signOptions: { expiresIn: '5d' }
-    }),
-
   ],
   controllers: [AppController, AuthController],
   providers: [
-    RedisService,
-    FutbolUpdadeService,
     AppService,
-    RedisService,
-    PrismaService,
-    TasksService,
-    
+    PrismaService,    
   ],
 })
 export class AppModule implements NestModule {
