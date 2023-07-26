@@ -21,7 +21,17 @@ export function listFilesInFolder(folderPath) {
       console.log("Her")
 
       const pdfData = await extractPdfData(filePath);
-      console.log(pdfData[15]);
+      console.log(pdfData[16], pdfData[17], pdfData[18]);
+      console.log(pdfData[21], pdfData[22], pdfData[24]);
+      console.log('--------------------------------------')
+      console.log(pdfData[34], pdfData[33], pdfData[34], pdfData[35]);
+      console.log('--------------------------------------')
+      console.log(pdfData[45], pdfData[50], pdfData[51]);
+      console.log(pdfData[61], pdfData[72], pdfData[82])
+      console.log('--------------------------------------')
+      console.log(pdfData[91], pdfData[102], pdfData[120]);
+      console.log('--------------------------------------')
+      console.log(pdfData[110], pdfData[112], pdfData[113], pdfData[114], pdfData[115]);
     })
   })
 }
