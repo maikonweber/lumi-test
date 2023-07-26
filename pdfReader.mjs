@@ -31,7 +31,11 @@ export function listFilesInFolder(folderPath) {
       console.log('--------------------------------------')
       console.log(pdfData[91], pdfData[102], pdfData[120]);
       console.log('--------------------------------------')
-      console.log(pdfData[110], pdfData[112], pdfData[113], pdfData[114], pdfData[115]);
+      console.log(pdfData[110], pdfData[112], pdfData[113], pdfData[114], pdfData[115], pdfData[116]);
+      console.log('--------------------------------------')
+      console.log(pdfData[116], pdfData[117], pdfData[118], pdfData[120], pdfData[121], pdfData[125]);
+      console.log('--------------------------------------')
+      
     })
   })
 }
