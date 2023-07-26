@@ -12,31 +12,27 @@ export class AppController {
     private readonly appService: AppService,
   ) { }
 
-  @Get('/get-current-round')
-  async getCurrentRound(@Request() req: FullDashboard): Promise<any> {
-    this.logger.log('Get Current Round');
-    let league = 71;
-    let season = 2023;
+  @Get('/get-current-round') {
 
-    return await this.appService.getCurrentRound(league, season, true);
-  }
+  return;
+}
 
-  @Get('/get-player-score')
-  getLeagueTeams(@Request() req: any): Promise<string> {
-    return this.appService.getBestPlayerScore(71, 2023, true);
-  }
+@Get('/get-player-score')
+getLeagueTeams(@Request() req: any): Promise < string > {
+  return ;
+}
 
 
-  @Get('/get-team-leagues-statict')
-  getAllLeaguesAvailable(@Request() req: any): Promise<any> {
-    return this.appService.getTeamStatist(req.team_id, req.league_id, req.season);
-  }
+@Get('/get-team-leagues-statict')
+getAllLeaguesAvailable(@Request() req: any): Promise < any > {
+  return this.appService.getTeamStatist(req.team_id, req.league_id, req.season);
+}
 
 
-  @Get('/get-current-markting')
-  getCurrentMarktingPayload(@Request() req: any): Promise<any> {
-    return this.appService.getCurrentMarktingPayload();
-  }
+@Get('/get-current-markting')
+getCurrentMarktingPayload(@Request() req: any): Promise < any > {
+  return this.appService.getCurrentMarktingPayload();
+}
 
 
 
